@@ -1,0 +1,510 @@
+#:import Factory kivy.factory.Factory
+WindowManager:
+    MainMenu:
+    COGMenu:
+    COGSessionMenu:
+    CSMenu:
+    InSessionMenu:
+
+
+<ToggleButton>:
+    halign: "center"
+    valign: "center"
+    font_size: 0.3 * self.height
+    text_size: self.size
+
+<Button>:
+
+    font_size: 0.15 * self.width
+    color: 1, 1, 1, 1
+    background_color: 1, 0, 0, 1
+
+
+<SmoothButton@Button>:
+    background_color: 0,0,0,0
+    canvas.before:
+        Color:
+            rgba: 0.3, 0, 0, 0.9
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [18]
+
+
+
+<RedirectionsNotes>:
+    title: "                                                                                                                                                                  Click outside to close."
+    separator_color: 0.2, 0.0, 0.0, 0
+    background_color: 0.9, 0, 0, 1
+    size_hint: 0.85, 0.8
+    Label:
+        size_hint_y: None
+        text_size: self.width, None
+        height: self.texture_size[1]
+        text: " Redirection training (This may also be thought of as changing guard) The basic action needed for this drill is that of punches, although do not commit yourself to any particular hand shape, such as a rigid open hand or a clenched fist, and make the changes at a pace to suit you.\nIn this exercise we are simply changing hand positions to react to ‘The Redirection’ from whichever hand is forward at that time. This is much more effective than simply waiting in a\n frozen ready position, this way: ‘We do not get into a position to do the technique, but instead do the technique from the position you are in’ Whichever hand is forward at the time of the redirection call, this is the hand you use."
+        size_hint: 1, 1
+        font_size: 0.028 * self.height
+        color: 1, 1, 1, 1
+
+<ChisauNotes>:
+    title: "                                                                                                                                                                  Click outside to close."
+    separator_color: 0.2, 0.0, 0.0, 0
+    background_color: 0.9, 0, 0, 1
+    size_hint: 0.85, 0.8
+    Label:
+        size_hint_y: None
+        text_size: self.size
+        height: self.texture_size[1]
+        text: "Virtual Chi Sau\n\n(The basic action needed for this exercise is the rolling between Tan Sau and Bong Sau, remember to keep the elbow tucked in on Tan and the elbow high on the Bong) Of course, Chi Sau is a partner training exercise and therefore requires two people, but what do we do when we do not have a partner, or, wish to have some extra training, this is where this method of exercise can be of great help. This is an exercise which will help you to stay centred, to keep balanced and able to react to defence against attacks or able to strike where we would ordinarily feel the opportunity. Using this app can allow you to still practice rolling (therefore keeping your shoulders in motion, working the muscles and keeping you relaxed while doing so), and keep you balanced, the only difference being that you will not feel the gap you need to attack down, or feel the strike to need to defend against, this will come via a verbal command. In order for you to react properly to these verbal commands you will need to be centred, both mentally and physically and to be able to ‘Stay in the moment’, elements which are some of the main benefits of training Chi Sau.\n\n     All reactions should come from the lower hand position (Tan Sau)"
+        size_hint: 1, 1
+        font_size: 0.028 * self.height
+        color: 1, 1, 1, 1
+
+
+<Gr5>:
+    title: ""
+    separator_color: 0.3, 0.0, 0.0, 1
+    background_color: 0.9, 0, 0, 1
+    Label:
+        text: "      Get ready!\n Session begins in\n      5 seconds!!"
+        size_hint: 1, 1
+        font_size: 0.05 * self.height
+        color: 1, 1, 1, 1
+
+<Gr4>:
+    title: ""
+    separator_color: 0.3, 0.0, 0.0, 1
+    background_color: 0.9, 0, 0, 1
+    Label:
+        text: "      Get ready!\n Session begins in\n      4 seconds!!"
+        size_hint: 1, 1
+        font_size: 0.05 * self.height
+        color: 1, 1, 1, 1
+
+<Gr3>:
+    title: ""
+    separator_color: 0.3, 0.0, 0.0, 1
+    background_color: 0.9, 0, 0, 1
+    Label:
+        text: "      Get ready!\n Session begins in\n      3 seconds!!"
+        size_hint: 1, 1
+        font_size: 0.05 * self.height
+        color: 1, 1, 1, 1
+
+<Gr2>:
+    title: ""
+    separator_color: 0.3, 0.0, 0.0, 1
+    background_color: 0.9, 0, 0, 1
+    Label:
+        text: "      Get ready!\n Session begins in\n      2 seconds!!"
+        size_hint: 1, 1
+        font_size: 0.05 * self.height
+        color: 1, 1, 1, 1
+
+<Gr1>:
+    title: ""
+    separator_color: 0.3, 0.0, 0.0, 1
+    background_color: 0.9, 0, 0, 1
+    Label:
+        text: "      Get ready!\n Session begins in\n      1 seconds!!"
+        size_hint: 1, 1
+        font_size: 0.05 * self.height
+        color: 1, 1, 1, 1
+
+<Gr>:
+    title: ""
+    separator_color: 0.3, 0.0, 0.0, 1
+    background_color: 0.9, 0, 0, 1
+    Label:
+        text: "Go!!!"
+        size_hint: 1, 1
+        font_size: 0.1 * self.height
+        color: 1, 1, 1, 1
+
+<P>:
+    separator_color: 0.9, 0.0, 0.0, 1
+
+
+    Button:
+        font_size: 0.4 * self.height
+        text: "1 minute"
+        size_hint: 0.6, 0.15
+        pos_hint: {"x": 0.2, "y": 0.70}
+        on_release:
+            root.session_time_60()
+
+
+    Button:
+        text: "2 minutes"
+        font_size: 0.4 * self.height
+        size_hint: 0.6, 0.15
+        pos_hint: {"x": 0.2, "y": 0.50}
+        on_release:
+            root.session_time_120()
+
+
+    Button:
+        text: "5 minutes"
+        font_size: 0.4 * self.height
+        size_hint: 0.6, 0.15
+        pos_hint: {"x": 0.2, "y": 0.30}
+        on_release:
+            root.session_time_300()
+
+
+    Button:
+        text: "10 minutes"
+        font_size: 0.4 * self.height
+        size_hint: 0.6, 0.15
+        pos_hint: {"x": 0.2, "y": 0.10}
+        on_release:
+            root.session_time_600()
+
+
+
+<Pt>:
+    separator_color: 0.9, 0.0, 0.0, 1
+
+    ToggleButton:
+        text_size: self.size
+        text: "Tan Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.2, "y": 0.80}
+        on_release:
+            root.populate_pt("Tan_sau")
+
+
+    ToggleButton:
+        text_size: self.size
+        text: "Bong Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.2, "y": 0.62}
+        on_release:
+            root.populate_pt("Bong_sau")
+
+    ToggleButton:
+        text_size: self.size
+        text: "Kau Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.2, "y": 0.44}
+        on_release:
+            root.populate_pt("Kau_sau")
+
+    ToggleButton:
+        text_size: self.size
+        text: "Low Garn"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.2, "y": 0.26}
+        on_release:
+            root.populate_pt("Low_Garn")
+
+    ToggleButton:
+        text_size: self.size
+        text: "Kwun Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.2, "y": 0.08}
+        on_release:
+            root.populate_pt("Kwun_sau")
+
+    ToggleButton:
+        text_size: self.size
+        text: "Garn Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.6, "y": 0.80}
+        on_release:
+            root.populate_pt("Garn_sau")
+
+    ToggleButton:
+        text_size: self.size
+        text: "Lap Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.6, "y": 0.62}
+        on_release:
+            root.populate_pt("Lap_sau")
+
+    ToggleButton:
+        text_size: self.size
+        text: "Pak Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.6, "y": 0.44}
+        on_release:
+            root.populate_pt("Pak_sau")
+
+    ToggleButton:
+        text_size: self.size
+        text: "Gum Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.6, "y": 0.26}
+        on_release:
+            root.populate_pt("Gum_sau")
+
+    ToggleButton:
+        text_size: self.size
+        text: "Biu Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.6, "y": 0.08}
+        on_release:
+            root.populate_pt("Biu_sau")
+
+<Pt2>:
+    separator_color: 0.9, 0.0, 0.0, 1
+
+    ToggleButton:
+        text: "Tan Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.2, "y": 0.70}
+        on_release:
+            root.populate_pt2("Tan")
+
+
+    ToggleButton:
+        text: "Bong Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.2, "y": 0.40}
+        on_release:
+            root.populate_pt2("Bong")
+
+    ToggleButton:
+        text: "Kwun Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.2, "y": 0.10}
+        on_release:
+            root.populate_pt2("Kwun")
+
+    ToggleButton:
+        text: "Garn Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.6, "y": 0.70}
+        on_release:
+            root.populate_pt2("Garn")
+
+    ToggleButton:
+        text: "Pak Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.6, "y": 0.40}
+        on_release:
+            root.populate_pt2("Pak")
+
+    ToggleButton:
+        text: "Gum Sau"
+        size_hint: 0.25, 0.15
+        pos_hint: {"x": 0.6, "y": 0.10}
+        on_release:
+            root.populate_pt2("Gum")
+
+
+
+<MainMenu>:
+
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'bg.png'
+    background_color: 0, 0, 0,
+    name: "main"
+
+    FloatLayout:
+
+        SmoothButton:
+            text: "Redirection\n   Training"
+            pos_hint: {"x": 0.1, "y": 0.1}
+            size_hint: 0.3, 0.2
+            on_release:
+                app.root.current = "cog"
+                root.manager.transition.direction = "left"
+                root.red_notes()
+
+        SmoothButton:
+            text: "  Virtual\n Chi Sau"
+            pos_hint: {"x": 0.6, "y": 0.1}
+            size_hint: 0.3, 0.2
+            on_release:
+                app.root.current = "cs"
+                root.manager.transition.direction = "left"
+                root.chisau_notes()
+<COGMenu>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'bg.png'
+
+    name: "cog"
+
+    FloatLayout:
+
+        Button:
+            text: "Redirection\n  Training"
+            color: 0, 0, 0, 1
+            background_color: 1, 1, 1, 0
+            size_hint: 0.4, 0.2
+            pos_hint: { "x": 0.3, "y": 0.4}
+
+        SmoothButton:
+            text: "Back"
+            font_size: 0.35 * self.width
+            size_hint: 0.1, 0.08
+            pos_hint: {"x": 0.45, "y": 0.05}
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
+
+        SmoothButton:
+            text: "Session\n Length"
+            pos_hint: { "x": 0.1, "y": 0.1}
+            size_hint: 0.3, 0.2
+            on_release: root.btn()
+
+
+        SmoothButton:
+            text: "Techniques"
+            pos_hint: { "x": 0.6, "y": 0.1}
+            size_hint: 0.3, 0.2
+            on_release:
+
+                root.btnt()
+
+        SmoothButton:
+            text: "Train"
+            font_size: 0.35 * self.width
+            size_hint: 0.1, 0.1
+            pos_hint: {"x": 0.45, "y": 0.15}
+            on_release:
+                app.root.current = "cog_session"
+                root.manager.transition.direction = "left"
+
+<CSMenu>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'bg.png'
+
+    name: "cs"
+
+    FloatLayout:
+
+        Button:
+            text: "  Virtual\n Chi Sau"
+            color: 0, 0, 0, 1
+            background_color: 1, 1, 1, 0
+            size_hint: 0.4, 0.2
+            pos_hint: { "x": 0.3, "y": 0.4}
+
+        SmoothButton:
+            text: "Back"
+            font_size: 0.35 * self.width
+            size_hint: 0.1, 0.08
+            pos_hint: {"x": 0.45, "y": 0.05}
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
+
+        SmoothButton:
+            text: "Session\n Length"
+            pos_hint: { "x": 0.1, "y": 0.1}
+            size_hint: 0.3, 0.2
+            on_release: root.btn()
+
+
+        SmoothButton:
+            text: "Techniques"
+            pos_hint: { "x": 0.6, "y": 0.1}
+            size_hint: 0.3, 0.2
+            on_release: root.btnt2()
+
+        SmoothButton:
+            text: "Train"
+            font_size: 0.35 * self.width
+            size_hint: 0.1, 0.1
+            pos_hint: {"x": 0.45, "y": 0.15}
+            on_release:
+                app.root.current = "cog_session"
+                root.manager.transition.direction = "left"
+
+
+
+
+<COGSessionMenu>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'bg.png'
+
+    name: "cog_session"
+
+    FloatLayout:
+
+        SmoothButton:
+            text: "Back"
+            font_size: 0.35 * self.width
+            size_hint: 0.1, 0.08
+            pos_hint: {"x": 0.45, "y": 0.05}
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
+
+        SmoothButton:
+            text: "Start"
+            font_size: 0.35 * self.width
+            size_hint: 0.2, 0.2
+            pos_hint: { "x": 0.2, "y": 0.1}
+            on_release:
+                app.root.current = "inside_session"
+                root.button_press()
+
+
+
+        SmoothButton:
+            text: "Stop"
+            font_size: 0.35 * self.width
+            size_hint: 0.2, 0.2
+            pos_hint: { "x": 0.6, "y": 0.1}
+
+<InSessionMenu>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'bg.png'
+
+    name: "inside_session"
+
+    FloatLayout:
+
+        SmoothButton:
+            text: "Back"
+            font_size: 0.35 * self.width
+            size_hint: 0.1, 0.08
+            pos_hint: {"x": 0.45, "y": 0.05}
+            on_release:
+                app.root.current = "cog"
+                root.manager.transition.direction = "right"
+                root.stop_function()
+
+        SmoothButton:
+            text: "Start"
+            font_size: 0.35 * self.width
+            size_hint: 0.2, 0.2
+            pos_hint: { "x": 0.2, "y": 0.1}
+
+
+        Button:
+            text: "Session in progress..."
+            color: 0, 0, 0, 1
+            background_color: 1, 1, 1, 0
+            size_hint: 0.4, 0.2
+            pos_hint: { "x": 0.3, "y": 0.4}
+
+
+
+        SmoothButton:
+            text: "Stop"
+            font_size: 0.35 * self.width
+            size_hint: 0.2, 0.2
+            pos_hint: { "x": 0.6, "y": 0.1}
+            on_release:
+                app.root.current = "cog"
+                root.stop_function()
