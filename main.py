@@ -14,9 +14,7 @@ from kivy.core.window import Window
 Window.clearcolor = (1, 1, 1, 1)
 import time, sys, random
 from threading import Thread
-import pygame
-from pygame import mixer
-pygame.init()
+from kivy.app import runTouchApp
 
 
 #################################### Variables and Containers ####################
@@ -243,15 +241,21 @@ class RedirectionsNotes(Popup):
     def __init__(self, **kwargs):
         super(RedirectionsNotes, self).__init__(**kwargs)
 
+
     def dismiss_popup(self):
         self.dismiss()
+
 
 class ChisauNotes(Popup):
     def __init__(self, **kwargs):
         super(ChisauNotes, self).__init__(**kwargs)
 
+
     def dismiss_popup(self):
         self.dismiss()
+
+
+
 ################ Get Ready Popups ############
 
 class Gr5(Popup):

@@ -33,23 +33,24 @@ WindowManager:
 
 
 <RedirectionsNotes>:
-    title: "                                                                                                                                                                  Click outside to close."
+    title: "Click outside to close."
     separator_color: 0.2, 0.0, 0.0, 0
-    background_color: 0.9, 0, 0, 1
+    background_color: 1, 1, 1, 1
     size_hint: 0.85, 0.8
     Label:
+        valign: "middle"
         size_hint_y: None
-        text_size: self.width, None
+        text_size: self.size
         height: self.texture_size[1]
         text: " Redirection training (This may also be thought of as changing guard) The basic action needed for this drill is that of punches, although do not commit yourself to any particular hand shape, such as a rigid open hand or a clenched fist, and make the changes at a pace to suit you.\nIn this exercise we are simply changing hand positions to react to ‘The Redirection’ from whichever hand is forward at that time. This is much more effective than simply waiting in a\n frozen ready position, this way: ‘We do not get into a position to do the technique, but instead do the technique from the position you are in’ Whichever hand is forward at the time of the redirection call, this is the hand you use."
         size_hint: 1, 1
-        font_size: 0.028 * self.height
+        font_size: 0.030 * self.height if self.height > self.width else 0.025 * self.width
         color: 1, 1, 1, 1
 
 <ChisauNotes>:
-    title: "                                                                                                                                                                  Click outside to close."
+    title: "Click outside to close."
     separator_color: 0.2, 0.0, 0.0, 0
-    background_color: 0.9, 0, 0, 1
+    background_color: 1, 1, 1, 1
     size_hint: 0.85, 0.8
     Label:
         size_hint_y: None
@@ -57,8 +58,10 @@ WindowManager:
         height: self.texture_size[1]
         text: "Virtual Chi Sau\n\n(The basic action needed for this exercise is the rolling between Tan Sau and Bong Sau, remember to keep the elbow tucked in on Tan and the elbow high on the Bong) Of course, Chi Sau is a partner training exercise and therefore requires two people, but what do we do when we do not have a partner, or, wish to have some extra training, this is where this method of exercise can be of great help. This is an exercise which will help you to stay centred, to keep balanced and able to react to defence against attacks or able to strike where we would ordinarily feel the opportunity. Using this app can allow you to still practice rolling (therefore keeping your shoulders in motion, working the muscles and keeping you relaxed while doing so), and keep you balanced, the only difference being that you will not feel the gap you need to attack down, or feel the strike to need to defend against, this will come via a verbal command. In order for you to react properly to these verbal commands you will need to be centred, both mentally and physically and to be able to ‘Stay in the moment’, elements which are some of the main benefits of training Chi Sau.\n\n     All reactions should come from the lower hand position (Tan Sau)"
         size_hint: 1, 1
-        font_size: 0.028 * self.height
         color: 1, 1, 1, 1
+        font_size: 0.025 * self.height if self.height > self.width else 0.020 * self.width
+
+
 
 
 <Gr5>:
