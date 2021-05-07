@@ -376,7 +376,7 @@ class Wing_Chun_Training_AssistantApp(App):
 def show_popup():
     show = P()
 
-    popupWindow = Popup(background_color = [1, 0.0, 0.0, 1], separator_color =  [0.9, 0.0, 0.0, 1], title = "Choose Length of Session, then click outside to close", content = show, size_hint = (0.8, 0.8), size = (400, 400))
+    popupWindow = Popup(background_color = [1, 1, 1, 1], separator_color =  [0.9, 0.0, 0.0, 1], title = "Choose Length of Session, then click outside to close", content = show, size_hint = (0.8, 0.8), size = (400, 400))
 
 
     popupWindow.open()
@@ -387,7 +387,7 @@ def show_popup():
 def show_popupt():
     showt = Pt()
 
-    popupWindowt = Popup(background_color = [1, 0.0, 0.0, 1], separator_color =  [0.9, 0.0, 0.0, 1], title = "Select Techniques to Train, then click outside to close", content = showt, size_hint = (0.8, 0.8), size = (400, 400))
+    popupWindowt = Popup(background_color = [1, 1, 1, 1], separator_color =  [0.9, 0.0, 0.0, 1], title = "Select Techniques to Train, then click outside to close", content = showt, size_hint = (0.8, 0.8), size = (400, 400))
 
     popupWindowt.open()
 
@@ -395,7 +395,7 @@ def show_popupt():
 def show_popupt2():
     showt2 = Pt2()
 
-    popupWindowt2 = Popup(background_color = [1, 0.0, 0.0, 1], separator_color =  [0.9, 0.0, 0.0, 1], title = "Select Techniques to Train, then click outside to close", content = showt2, size_hint = (0.8, 0.8), size = (400, 300))
+    popupWindowt2 = Popup(background_color = [1, 1, 1, 1], separator_color =  [0.9, 0.0, 0.0, 1], title = "Select Techniques to Train, then click outside to close", content = showt2, size_hint = (0.8, 0.8), size = (400, 300))
 
     popupWindowt2.open()
 
