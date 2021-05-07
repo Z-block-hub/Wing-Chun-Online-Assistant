@@ -30,6 +30,22 @@ WindowManager:
             pos: self.pos
             radius: [18]
 
+<Notes>:
+    title: "Click outside to close."
+    separator_color: 0.2, 0.0, 0.0, 0
+    background_color: 1, 1, 1, 1
+    size_hint: 0.85, 0.8
+    Label:
+        size_hint_y: None
+        text_size: self.size
+        valign: "middle"
+        halign: "center"
+        height: self.texture_size[1]
+        text: "This app was created for students of Sifu Colin Ward, one of the senior students of Grand Master Ip Chun and members of the WingChunOnline community. It involves two of the drills/excercises developed by Sifu Ward during the worldwide lockdown of the Covid-19 pandemic. It aims to train and improve your reactions and to serve as a virtual Chi Sau partner in the absence of full contact training.\n\n\nDisclaimer!\nThis app is merely to be used as a guide to training and not as a guaranteed means of self-defence, if you are unsure of training any of the moves or techniques within this app:\n\nYOU MUST SEEK MEDICAL ADVICE FROM YOUR DOCTOR FIRST!\n\nFor more information please visit www.wingchunonline.com\n\n\n Remember, if it’s not comfortable, it’s not right\n\n App design - Lukasz Zablocki\n Copyright - Wing Chun Online"
+        size_hint: 1, 1
+        color: 1, 1, 1, 1
+        font_size: 0.025 * self.height if self.height > self.width else 0.020 * self.width
+
 
 
 <RedirectionsNotes>:
@@ -126,7 +142,7 @@ WindowManager:
 
 <P>:
     separator_color: 0.9, 0.0, 0.0, 1
-
+    background_color: 1, 1, 1, 1
 
     Button:
         font_size: 0.4 * self.height
@@ -167,6 +183,8 @@ WindowManager:
 
 <Pt>:
     separator_color: 0.9, 0.0, 0.0, 1
+    background_color: 1, 1, 1, 1
+
 
     ToggleButton:
         text_size: self.size
@@ -310,7 +328,16 @@ WindowManager:
     FloatLayout:
 
         SmoothButton:
+            text: "  Info..."
+            font_size: 0.25 * self.height if self.height > self.width else 0.15 * self.width
+            pos_hint: {"x": 0.85, "y": 0.9}
+            size_hint: 0.1, 0.05
+            on_release:
+                root.notes()
+
+        SmoothButton:
             text: "Redirection\n   Training"
+            font_size: 0.10 * self.height if self.height > self.width else 0.10 * self.width
             pos_hint: {"x": 0.1, "y": 0.1}
             size_hint: 0.3, 0.2
             on_release:
@@ -320,6 +347,7 @@ WindowManager:
 
         SmoothButton:
             text: "  Virtual\n Chi Sau"
+            font_size: 0.10 * self.height if self.height > self.width else 0.10 * self.width
             pos_hint: {"x": 0.6, "y": 0.1}
             size_hint: 0.3, 0.2
             on_release:
@@ -339,6 +367,7 @@ WindowManager:
 
         Button:
             text: "Redirection\n  Training"
+            font_size: 0.10 * self.height if self.height > self.width else 0.10 * self.width
             color: 0, 0, 0, 1
             background_color: 1, 1, 1, 0
             size_hint: 0.4, 0.2
@@ -346,7 +375,7 @@ WindowManager:
 
         SmoothButton:
             text: "Back"
-            font_size: 0.35 * self.width
+            font_size: 0.20 * self.height if self.height > self.width else 0.20 * self.width
             size_hint: 0.1, 0.08
             pos_hint: {"x": 0.45, "y": 0.05}
             on_release:
@@ -355,6 +384,7 @@ WindowManager:
 
         SmoothButton:
             text: "Session\n Length"
+            font_size: 0.10 * self.height if self.height > self.width else 0.10 * self.width
             pos_hint: { "x": 0.1, "y": 0.1}
             size_hint: 0.3, 0.2
             on_release: root.btn()
@@ -362,6 +392,7 @@ WindowManager:
 
         SmoothButton:
             text: "Techniques"
+            font_size: 0.10 * self.height if self.height > self.width else 0.10 * self.width
             pos_hint: { "x": 0.6, "y": 0.1}
             size_hint: 0.3, 0.2
             on_release:
@@ -370,7 +401,7 @@ WindowManager:
 
         SmoothButton:
             text: "Train"
-            font_size: 0.35 * self.width
+            font_size: 0.20 * self.height if self.height > self.width else 0.20 * self.width
             size_hint: 0.1, 0.1
             pos_hint: {"x": 0.45, "y": 0.15}
             on_release:
@@ -390,6 +421,7 @@ WindowManager:
 
         Button:
             text: "  Virtual\n Chi Sau"
+            font_size: 0.10 * self.height if self.height > self.width else 0.10 * self.width
             color: 0, 0, 0, 1
             background_color: 1, 1, 1, 0
             size_hint: 0.4, 0.2
@@ -397,7 +429,7 @@ WindowManager:
 
         SmoothButton:
             text: "Back"
-            font_size: 0.35 * self.width
+            font_size: 0.20 * self.height if self.height > self.width else 0.20 * self.width
             size_hint: 0.1, 0.08
             pos_hint: {"x": 0.45, "y": 0.05}
             on_release:
@@ -406,6 +438,7 @@ WindowManager:
 
         SmoothButton:
             text: "Session\n Length"
+            font_size: 0.10 * self.height if self.height > self.width else 0.10 * self.width
             pos_hint: { "x": 0.1, "y": 0.1}
             size_hint: 0.3, 0.2
             on_release: root.btn()
@@ -413,13 +446,14 @@ WindowManager:
 
         SmoothButton:
             text: "Techniques"
+            font_size: 0.10 * self.height if self.height > self.width else 0.10 * self.width
             pos_hint: { "x": 0.6, "y": 0.1}
             size_hint: 0.3, 0.2
             on_release: root.btnt2()
 
         SmoothButton:
             text: "Train"
-            font_size: 0.35 * self.width
+            font_size: 0.20 * self.height if self.height > self.width else 0.20 * self.width
             size_hint: 0.1, 0.1
             pos_hint: {"x": 0.45, "y": 0.15}
             on_release:
@@ -442,7 +476,7 @@ WindowManager:
 
         SmoothButton:
             text: "Back"
-            font_size: 0.35 * self.width
+            font_size: 0.20 * self.height if self.height > self.width else 0.20 * self.width
             size_hint: 0.1, 0.08
             pos_hint: {"x": 0.45, "y": 0.05}
             on_release:
@@ -451,7 +485,7 @@ WindowManager:
 
         SmoothButton:
             text: "Start"
-            font_size: 0.35 * self.width
+            font_size: 0.20 * self.height if self.height > self.width else 0.20 * self.width
             size_hint: 0.2, 0.2
             pos_hint: { "x": 0.2, "y": 0.1}
             on_release:
@@ -462,7 +496,7 @@ WindowManager:
 
         SmoothButton:
             text: "Stop"
-            font_size: 0.35 * self.width
+            font_size: 0.20 * self.height if self.height > self.width else 0.20 * self.width
             size_hint: 0.2, 0.2
             pos_hint: { "x": 0.6, "y": 0.1}
 
@@ -479,7 +513,7 @@ WindowManager:
 
         SmoothButton:
             text: "Back"
-            font_size: 0.35 * self.width
+            font_size: 0.20 * self.height if self.height > self.width else 0.20 * self.width
             size_hint: 0.1, 0.08
             pos_hint: {"x": 0.45, "y": 0.05}
             on_release:
@@ -489,7 +523,7 @@ WindowManager:
 
         SmoothButton:
             text: "Start"
-            font_size: 0.35 * self.width
+            font_size: 0.20 * self.height if self.height > self.width else 0.20 * self.width
             size_hint: 0.2, 0.2
             pos_hint: { "x": 0.2, "y": 0.1}
 
@@ -505,7 +539,7 @@ WindowManager:
 
         SmoothButton:
             text: "Stop"
-            font_size: 0.35 * self.width
+            font_size: 0.20 * self.height if self.height > self.width else 0.20 * self.width
             size_hint: 0.2, 0.2
             pos_hint: { "x": 0.6, "y": 0.1}
             on_release:

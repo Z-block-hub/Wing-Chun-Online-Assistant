@@ -85,6 +85,9 @@ class Widgets(Widget):
 
 class MainMenu(Screen): # Main Menu
 
+    def notes(self):
+        Notes().open()
+
     def red_notes(self):
         RedirectionsNotes().open()
 
@@ -236,6 +239,14 @@ class Pr3(Popup):
         self.dismiss()
 
 ################## Notes Popups ######################
+
+class Notes(Popup):
+    def __init__(self, **kwargs):
+        super(Notes, self).__init__(**kwargs)
+
+
+    def dismiss_popup(self):
+        self.dismiss()
 
 class RedirectionsNotes(Popup):
     def __init__(self, **kwargs):
